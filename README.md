@@ -129,26 +129,26 @@ Make sure you have:
    cd Terraform_Infrastructure_management_project
 
 2. Initialize Terraform :
-   
- --> terraform init
 
-3. Validate configuration :
+        terraform init
+
+4. Validate configuration :
    
- --> terraform validate
+       terraform validate
 
 4. Plan infrastructure :
    
- --> terraform plan
+       terraform plan
 
 
 5. Apply changes :
    
- --> terraform apply --auto-approve
+       terraform apply --auto-approve
 
 
 6. Destroy infrastructure :
    
- --> terraform destroy --auto-approve
+       terraform destroy --auto-approve
 
  
 
