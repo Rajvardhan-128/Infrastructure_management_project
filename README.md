@@ -25,7 +25,7 @@ Make sure you have:
 
 ---
 
-**flow of steps**:  
+**Flow of steps**:  
 - EC2 creation  
 - Install Jenkins  
 - Install Terraform  
@@ -92,7 +92,7 @@ Before running Terraform, configure remote state management:
 2. Create a DynamoDB Table (manually via AWS Console)**  
    - Table name: `terraform-lock` (or any name you prefer)  
    - Partition key: `LockID` (String)  
-   - This is used for **state locking to avoid conflicts during parallel runs  
+   - This is used for **state locking** to avoid conflicts during parallel runs  
 
 3. Update your Terraform backend configuration:
    
