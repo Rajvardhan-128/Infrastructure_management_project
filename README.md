@@ -53,21 +53,22 @@ Make sure you have:
 6. Destroy infrastructure :
    
  --> terraform destroy --auto-approve
+ 
 
 📂 Project Structure
 
 
-├── main.tf          # Main resources (EC2, VPC, etc.)
+├── main.tf                  # Main resources (EC2, VPC, etc.)
 
-├── s3.tf            # S3 bucket for state management
+├── s3.tf                    # S3 bucket for state management
 
-├── variables.tf     # Input variables
+├── variables.tf             # Input variables
 
-├── terraform.tfvars # Variable values
+├── terraform.tfvars         # Variable values
 
-├── outputs.tf       # Outputs
+├── outputs.tf               # Outputs
 
-└── Jenkinsfile      # Jenkins pipeline for automation
+└── Jenkinsfile              # Jenkins pipeline for automation
 
 
 🔒 State Management
