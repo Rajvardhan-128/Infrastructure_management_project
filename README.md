@@ -33,30 +33,40 @@ Make sure you have:
    cd Terraform_Infrastructure_management_project
 
 2. Initialize Terraform :
+   
 --> terraform init
 
-3. Validate configuration :
+4. Validate configuration :
+   
 --> terraform validate
 
-4. Plan infrastructure :
+5. Plan infrastructure :
+   
 --> terraform plan
 
 
-5. Apply changes :
+6. Apply changes :
+   
 --> terraform apply --auto-approve
 
 
-6. Destroy infrastructure
+7. Destroy infrastructure :
+   
 --> terraform destroy --auto-approve
 
 📂 Project Structure
 
 .
 ├── main.tf          # Main resources (EC2, VPC, etc.)
+
 ├── s3.tf            # S3 bucket for state management
+
 ├── variables.tf     # Input variables
+
 ├── terraform.tfvars # Variable values
+
 ├── outputs.tf       # Outputs
+
 └── Jenkinsfile      # Jenkins pipeline for automation
 
 🔒 State Management
