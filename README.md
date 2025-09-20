@@ -73,6 +73,7 @@ Make sure you have:
 
 🔒 State Management
 
+
 Terraform state is stored remotely in an S3 bucket
 
 DynamoDB table is used for state locking
