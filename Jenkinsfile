@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    parameters {
+        choice(name: 'action', choices: ['apply', 'destroy'], description: 'Select the Terraform action to perform')
+    }
 
     stages {
         stage('Cloning github repo') {
