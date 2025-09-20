@@ -54,11 +54,11 @@ pipeline {
             }
         }
         
-        stage("Terraform Plan") {
-            steps {
-                sh "terraform plan"
-            }
-        }
+        // stage("Terraform Plan") {
+        //     steps {
+        //         sh "terraform plan"
+        //     }
+        // }
 
         stage("Action") {
             steps {
