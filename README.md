@@ -93,19 +93,19 @@ Make sure you have:
    
   3) In configuration:
    
-   1) Select Pipeline script from SCM
+  4) Select Pipeline script from SCM
 
-   2) SCM: Git
+  5) SCM: Git
     
-   3) Repository URL:
+  6) Repository URL:
  
     https://github.com/Rajvardhan-128/Terraform_Infrastructure_management_project.git 
    
-   4) Branch: main
+   7) Branch: main
    
-   5) Script Path: Jenkinsfile
+   8) Script Path: Jenkinsfile
    
-   6) Save and Build the pipeline
+   9) Save and Build the pipeline
 
 
  5️⃣ Run Terraform from Jenkins
