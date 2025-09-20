@@ -34,7 +34,7 @@ Make sure you have:
    
 2. Choose Amazon Linux 2 / Ubuntu AMI
      
-3. Select instance type (e.g., `t2.micro`)
+3. Select instance type (e.g., `t2.medium`)
    
 4. Configure security group → Allow All Traffic (0.0.0.0/0) for testing purposes
     
@@ -80,7 +80,8 @@ Make sure you have:
 
 
 # Verify installation
-terraform -version
+
+    terraform -version
 
 
 
@@ -93,17 +94,18 @@ terraform -version
   3) In configuration:
    
    1. Select Pipeline script from SCM
+
       SCM: Git
    
-   2. Repository URL:
+   3. Repository URL:
  
     https://github.com/Rajvardhan-128/Terraform_Infrastructure_management_project.git 
    
-   Branch: main
+   3. Branch: main
    
-   Script Path: Jenkinsfile
+   4. Script Path: Jenkinsfile
    
-   Save and Build the pipeline
+   5. Save and Build the pipeline
 
 
  5️⃣ Run Terraform from Jenkins
@@ -147,6 +149,7 @@ terraform -version
 6. Destroy infrastructure :
    
  --> terraform destroy --auto-approve
+
  
 
 📂 Project Structure
@@ -165,6 +168,7 @@ terraform -version
 └── Jenkinsfile               # Jenkins pipeline for automation
 
 
+
 🔒 State Management
 
 
@@ -174,17 +178,18 @@ Terraform state is stored remotely in an S3 bucket
 DynamoDB table is used for state locking
 
 
+
 📌 Notes
 
-Bucket names must be unique and lowercase
+1. Bucket names must be unique and lowercase
 
-Security group names should not duplicate existing ones
+2. Security group names should not duplicate existing ones
 
-Always run terraform init -reconfigure if backend configuration changes
+3. Always run terraform init -reconfigure if backend configuration changes
 
 🤝 Contributing
 
-Feel free to fork this repo and submit pull requests to improve infrastructure design and automation.
+-> Feel free to fork this repo and submit pull requests to improve infrastructure design and automation.
 
 👤 Author
 
