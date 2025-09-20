@@ -50,6 +50,7 @@ Make sure you have:
 --> terraform destroy --auto-approve
 
 📂 Project Structure
+
 .
 ├── main.tf          # Main resources (EC2, VPC, etc.)
 ├── s3.tf            # S3 bucket for state management
@@ -79,4 +80,5 @@ Feel free to fork this repo and submit pull requests to improve infrastructure d
 👤 Author
 
 Rajvardhan Kale 
+
 Terraform | AWS | DevOps | Jenkins
