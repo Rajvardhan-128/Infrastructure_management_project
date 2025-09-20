@@ -38,7 +38,7 @@ pipeline {
     agent any
     
     parameters {
-        choice(name: 'action', choices: ['plan', 'apply', 'destroy'], description: 'Select the Terraform action to perform by jenkins')
+        choice(name: 'action', choices: ['apply', 'destroy'], description: 'Select the Terraform action to perform by jenkins')
     }
 
     stages {
@@ -54,7 +54,11 @@ pipeline {
             }
         }
         
-       
+       stage ("terraform Plan") {
+           steps {
+               sh ("terraform plan")
+           }
+        }
 
         stage("Action") {
             steps {
