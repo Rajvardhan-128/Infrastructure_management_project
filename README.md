@@ -105,7 +105,7 @@ Before running Terraform, configure remote state management:
          dynamodb_table = "terraform-lock"
          encrypt        = true
        }
-     }   
+       }   
 
 
 
