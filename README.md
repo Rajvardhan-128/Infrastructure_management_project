@@ -25,7 +25,15 @@ Make sure you have:
 
 ---
 
+**flow of steps**:  
+- EC2 creation  
+- Install Jenkins  
+- Install Terraform  
+- **Create S3 bucket + DynamoDB manually**  
+- Configure Jenkins pipeline  
+- Run Terraform
 
+  
 ⚙️ Setup Instructions  
 
 1️⃣ Launch EC2 Instance 
@@ -73,6 +81,33 @@ Make sure you have:
    Access Jenkins in your browser:
       
       http://<EC2_PUBLIC_IP>:8080
+
+3️⃣ Setup Terraform Backend (S3 + DynamoDB)
+Before running Terraform, configure remote state management:
+
+1. Create an S3 Bucket (manually via AWS Console)  
+   - Bucket name must be globally unique and lowercase  
+   - Enable Versioning to keep track of state file history  
+
+2. Create a DynamoDB Table (manually via AWS Console)**  
+   - Table name: `terraform-lock` (or any name you prefer)  
+   - Partition key: `LockID` (String)  
+   - This is used for **state locking to avoid conflicts during parallel runs  
+
+3. Update your Terraform backend configuration:
+   
+
+       terraform {
+       backend "s3" {
+         bucket         = "your-s3-bucket-name"
+         key            = "terraform/state.tfstate"
+         region         = "ap-south-1"
+         dynamodb_table = "terraform-lock"
+         encrypt        = true
+       }
+     }   
+
+
 
 # Download Terraform
 
