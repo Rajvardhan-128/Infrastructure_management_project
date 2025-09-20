@@ -34,29 +34,29 @@ Make sure you have:
 
 2. Initialize Terraform :
    
---> terraform init
+ --> terraform init
 
-4. Validate configuration :
+3. Validate configuration :
    
---> terraform validate
+ --> terraform validate
 
-5. Plan infrastructure :
+4. Plan infrastructure :
    
---> terraform plan
+ --> terraform plan
 
 
-6. Apply changes :
+5. Apply changes :
    
---> terraform apply --auto-approve
+ --> terraform apply --auto-approve
 
 
-7. Destroy infrastructure :
+6. Destroy infrastructure :
    
---> terraform destroy --auto-approve
+ --> terraform destroy --auto-approve
 
 📂 Project Structure
 
-.
+
 ├── main.tf          # Main resources (EC2, VPC, etc.)
 
 ├── s3.tf            # S3 bucket for state management
@@ -69,11 +69,13 @@ Make sure you have:
 
 └── Jenkinsfile      # Jenkins pipeline for automation
 
+
 🔒 State Management
 
 Terraform state is stored remotely in an S3 bucket
 
 DynamoDB table is used for state locking
+
 
 📌 Notes
 
