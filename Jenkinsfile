@@ -2,7 +2,7 @@
 //     agent any
     
 //     parameters {
-//         choice(name: 'action', choices: ['apply', 'destroy'], description: 'Select the Terraform action to perform')
+//         choice(name: 'action', choices: ['plan', 'apply', 'destroy'], description: 'Select the Terraform action to perform')
 //     }
 
 //     stages {
@@ -18,11 +18,11 @@
 //              }
 //          }
         
-//         stage ("terraform Plan") {
-//             steps {
-//                 sh ("terraform plan") 
-//             }
-//         }
+//        // stage ("terraform Plan") {
+//         //    steps {
+//           //      sh ("terraform plan") 
+//             //}
+//         //}
 
 //         stage ("Action") {
 //             steps {
