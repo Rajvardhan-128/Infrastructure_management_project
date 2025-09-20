@@ -31,7 +31,7 @@ Make sure you have:
 - Install Terraform  
 - **Create S3 bucket + DynamoDB manually**  
 - Configure Jenkins pipeline  
-- Run Terraform
+- Build The Pipeline or Manually Run Terraform
 
   
 ⚙️ Setup Instructions  
